@@ -13,17 +13,16 @@ namespace StarChart.Controllers
     {       
 
         private readonly  ApplicationDbContext _context;
-    
-
+  
         public CelestialObjectController (ApplicationDbContext context) => _context = context;
 
         [HttpGet("{id:int}/Name/{GetByID}")]
         public IActionResult GetId(int id)
-            {
+            {          
                 return this.NotFound();
             }
 
-        [HttpGet("{name")]
+        [HttpGet("{name}")]
         public IActionResult GetByName(string name)
             {
                 return this.NotFound();
@@ -32,7 +31,7 @@ namespace StarChart.Controllers
         [HttpGet]
         public IActionResult GetAll(int id)
             {
-                return Ok;
+                return Ok();
             }
     }
 }
